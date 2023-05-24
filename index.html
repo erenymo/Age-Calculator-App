@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Age Calculator APP</title>
+    <link rel="stylesheet" href="./output/tailwind.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body
+    class="flex bg-gradient-to-r from-violet-300 to-white items-center justify-center h-screen font-primary"
+  >
+    <main>
+      <!--CARD START-->
+      <div
+        class="md:p-12 px-8 py-12 bg-white rounded-br-large rounded-tl-normal rounded-bl-normal rounded-tr-normal shadow-xl"
+      >
+        <!--input start-->
+        <div class="flex md:justify-normal md:gap-7 justify-between">
+          <!-- DAY INPUT-->
+          <div class="">
+            <h2 class="day-text text-smokeyGrey text-sm tracking-widest">
+              DAY
+            </h2>
+            <input
+              type="text"
+              id="input-day"
+              class="cursor-pointer rounded-md md:w-36 w-20 mt-2 border-2 md:py-3 md:px-4 py-2 px-4 pl-3 pr-1 md:text-3xl text-xl focus:outline-none focus:border-violet-400"
+              placeholder="DD"
+            />
+            <!-- ERROR MESSAGE-->
+            <p
+              class="w-20 md:w-full error-day italic text-xs mt-2 hidden text-lightRed"
+            >
+              Must be a valid day
+            </p>
+          </div>
+
+          <!-- MONTH INPUT-->
+          <div class="">
+            <h2 class="month-text text-smokeyGrey text-sm tracking-widest">
+              MONTH
+            </h2>
+            <input
+              type="text"
+              id="input-month"
+              class="cursor-pointer rounded-md md:w-36 w-20 mt-2 border-2 md:py-3 md:px-4 py-2 px-4 pl-3 pr-1 md:text-3xl text-xl focus:outline-none focus:border-violet-400"
+              placeholder="MM"
+            />
+            <p
+              class="w-20 md:w-full error-month italic text-xs mt-2 hidden text-lightRed"
+            >
+              Must be a valid month
+            </p>
+          </div>
+
+          <!-- YEAR INPUT-->
+          <div class="">
+            <h2 class="year-text text-smokeyGrey text-sm tracking-widest">
+              YEAR
+            </h2>
+            <input
+              type="text"
+              id="input-year"
+              class="cursor-pointer rounded-md md:w-36 w-20 mt-2 border-2 md:py-3 md:px-4 py-2 px-4 pl-3 pr-1 md:text-3xl text-xl focus:outline-none focus:border-violet-400"
+              placeholder="YYYY"
+            />
+            <p
+              class="w-20 md:w-full error-year italic text-xs mt-2 hidden text-lightRed"
+            >
+              Must be in the past
+            </p>
+          </div>
+        </div>
+        <!-- input end -->
+
+        <!-- button section-->
+        <div
+          class="flex mt-4 items-center md:justify-between relative h-20 md:h-fit"
+        >
+          <div class="border border-offWhite w-full md:w-lineWidth"></div>
+          <button class="calculate-button">
+            <img
+              src="images/icon-arrow.svg"
+              alt=""
+              class="bg-purple p-4 rounded-full hover:bg-offBlack duration-200 active:translate-y-2 absolute right-1/2 top-0 transform md:static translate-x-1/2 md:translate-x-0"
+            />
+          </button>
+        </div>
+
+        <!--AGE DISPLAY SECTION START-->
+        <div
+          class="flex flex-col gap-4 md:text-7xl text-5xl font-bold md:mt-2 mt-8"
+        >
+          <!--YEARS-->
+          <div class="">
+            <p class="italic text-offBlack">
+              <em class="screen-year text-purple tracking-wider">--</em> years
+            </p>
+          </div>
+
+          <!--MONTHS-->
+          <div class="">
+            <p class="italic text-offBlack">
+              <em class="screen-month text-purple tracking-wider">--</em> months
+            </p>
+          </div>
+
+          <!--DAYS-->
+          <div class="">
+            <p class="italic text-offBlack">
+              <em class="screen-day text-purple tracking-wider">--</em> days
+            </p>
+          </div>
+        </div>
+        <!--AGE DISPLAY SECTION END-->
+      </div>
+      <!--CARD END-->
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
